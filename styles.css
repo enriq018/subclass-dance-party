@@ -4,7 +4,15 @@ body, html{
 body{
   margin: 0px;
   background-color:#444;
+  background
   font-size: 18px;
+  background-image: url("http://screenrobot.com/wp-content/uploads/2013/11/harry-potter-great-hall-feast.jpg");
+       height: 100%; 
+
+    /* Center and scale the image nicely */
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 body, a:link, a:visited, a:active{
   color: lightblue;
@@ -21,13 +29,46 @@ body, a:link, a:visited, a:active{
   background-color: #777;
 }
 .dancer{
+
   border:10px solid red;
   border-radius:10px;
   position:absolute;
 }
+/*Voldemort
+*/.dancer2{
+content: url('https://media.giphy.com/media/3oKIPsPewp9Xd4HcWY/giphy.gif');
+  width: 200px;
+  height: auto;
+  position:fixed;
 
-.dancer2{
-  border:10px solid blue;
-  border-radius:10px;
-  position:absolute;
+}
+/*blanketPotter*/
+.makeCoolDancer{
+  content: url('https://media.giphy.com/media/jf5gOY5L1Uf4s/giphy.gif');
+  width: 200px;
+  height: auto;
+  position:fixed;
+}
+
+.makeCoolDancer:hover{
+  content: url('https://media.giphy.com/media/jf5gOY5L1Uf4s/giphy.gif');
+  width: 400px;
+  height: auto;
+  position:fixed;
+}
+
+
+
+.makeDopeDancer{
+ content: url('https://media.giphy.com/media/l1KVaVCC1jrRoVlGE/giphy.gif');
+  width: 200px;
+  height: auto;
+position:fixed;
+}
+
+.makeDopeDancer:hover { 
+  content: url('https://media.giphy.com/media/3o7bu3l8vcRPawuMSs/giphy.gif');
+  width: 400px;
+  height: auto;
+  position:fixed;
 }

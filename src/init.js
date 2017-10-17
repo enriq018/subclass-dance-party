@@ -1,4 +1,5 @@
 $(document).ready(function() {
+  
   window.dancers = [];
 
   $(document).on('click', '.lineUp', function() {
@@ -45,6 +46,7 @@ $(document).ready(function() {
     window.dancers.push(dancer);
     $('body').append(dancer.$node);
   });
+
 });
 
 
