@@ -18,38 +18,11 @@
 //   return blinkyDancer;
 // };
 
-
-// var makeBlinkyDancer = function(top, left, timeBetweenSteps) {
-//   makeDancer.call(this.makeDancer);
-//   // console.log('==============', this.makeBlinkyDancer.prototype.step)
-//   this.oldStep = this.makeBlinkyDancer.prototype.step;
-//   this.$node = $('<span class="dancer"></span>');
-
-
-// };
-// // console.log('init', this.makeDancer.prototype)
-// // console.log('init2', makeDancer)
-
-// makeBlinkyDancer.prototype = Object.create(this.makeDancer.prototype);
-// makeBlinkyDancer.prototype.constructor = makeBlinkyDancer;
-
-// makeBlinkyDancer.prototype.step = function() {
-//   console.log('++++++++++++++++', this);
-//   this.oldStep();
-//   this.$node.toggle();
-// };
-
 var makeBlinkyDancer = function(top, left, timeBetweenSteps) {
-
-  this.b = 'an other varaiable'
-  // this.step();
-
-  this.oldStep = window.makeDancer.prototype.step;
-  console.log(this.oldStep)
-  console.log('1')
-  this.a = 'myVarible';
+  // this.oldStep = window.makeDancer.prototype.step;
   makeDancer.call(this, top, left, timeBetweenSteps);
-  
+  this.$node = $('<span class="dancer2"></span>');
+  this.setPosition(this.top, this.left);
 
 };
 
@@ -57,10 +30,9 @@ makeBlinkyDancer.prototype = Object.create(makeDancer.prototype);
 makeBlinkyDancer.prototype.constructor = makeBlinkyDancer;
 
 makeBlinkyDancer.prototype.step = function() {
-  // this.oldStep();
-  console.log('2')
-  console.log('old Step =============', this.a)
-  this.oldStep();
+  //console.log('MBD', this.step);
+  // this.step();''
+  makeDancer.prototype.step.call(this);
   this.$node.toggle();
 };
 
