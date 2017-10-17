@@ -40,21 +40,27 @@
 // };
 
 var makeBlinkyDancer = function(top, left, timeBetweenSteps) {
-  makeDancer.call(this, top, left, timeBetweenSteps);
+
+  this.b = 'an other varaiable'
   // this.step();
-  console.log('oldstep---------', this.step);
+
   this.oldStep = window.makeDancer.prototype.step;
-  console.log('constructor', this.oldStep)
-  console.log('constructor this', this)
+  console.log(this.oldStep)
+  console.log('1')
+  this.a = 'myVarible';
+  makeDancer.call(this, top, left, timeBetweenSteps);
+  
+
 };
 
 makeBlinkyDancer.prototype = Object.create(makeDancer.prototype);
 makeBlinkyDancer.prototype.constructor = makeBlinkyDancer;
 
 makeBlinkyDancer.prototype.step = function() {
-  console.log('step this', this)
+  // this.oldStep();
+  console.log('2')
+  console.log('old Step =============', this.a)
   this.oldStep();
-  console.log('inside step', this.oldStep)
   this.$node.toggle();
 };
 
