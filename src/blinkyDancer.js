@@ -48,4 +48,3 @@ makeBlinkyDancer.prototype.step = function() {
 
 
 
-

@@ -2,8 +2,32 @@ $(document).ready(function() {
   
   window.dancers = [];
 
+    // console.log($(window.dancers[i].$node[0]).hasClass('dancer2'));
+    //   console.log(window.dancers[i])
+    //   console.log(window.dancers[i].$node[0])
+
+  $(document).on('click', '.spell', function() {
+  console.log('clicked spell')
+    for (var i = 0; i < window.dancers.length; i++) {
+      if ($(window.dancers[i].$node[0]).hasClass('dancer2')) {
+        $(window.dancers[i].$node[0]).remove();
+      }
+    }
+  });
+
+ $(document).on('click', '.spell', function() {
+    console.log('ex clicked')
+    var ex = window['makeExplosion'];
+    var explosion = new ex(100,100,1000);
+  $('body').append(explosion.$node);
+    console.log(explosion)
+    explosion.explosion();
+    $(explosion).toggle()
+  });
+
   $(document).on('click', '.lineUp', function() {
     for (var i = 0; i < window.dancers.length; i++) {
+  
       window.dancers[i].lineUp();
     }
   });
